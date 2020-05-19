@@ -1,13 +1,13 @@
-part of flutter_commons;
+library htdc_fade_button;
+
+import 'package:flutter/widgets.dart';
 
 class FadeButton extends StatefulWidget {
-  final Function onPressed;
+  final VoidCallback onPressed;
   final Widget child;
-  final String tooltip;
 
   const FadeButton({
     Key key,
-    this.tooltip,
     @required this.child,
     @required this.onPressed,
   }) : super(key: key);
@@ -32,10 +32,12 @@ class _FadeButtonState extends State<FadeButton>
   }
 
   void setTextTransparent() {
+    if (widget.onPressed == null) return;
     _controller.value = 0.6;
   }
 
   void setTextSolid() {
+    if (widget.onPressed == null) return;
     _controller.animateTo(1.0, duration: _fadeOutDuration);
   }
 
@@ -59,12 +61,6 @@ class _FadeButtonState extends State<FadeButton>
       ),
     );
 
-    if (widget.tooltip != null) {
-      result = Tooltip(
-        message: widget.tooltip,
-        child: result,
-      );
-    }
     return result;
   }
 

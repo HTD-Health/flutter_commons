@@ -1,0 +1,17 @@
+name: htdc_fade_button
+description: Widget that provides fade effect when tapped.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
