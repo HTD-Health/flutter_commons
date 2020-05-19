@@ -2,10 +2,24 @@
 
 A mono repo of helpful flutter widgets and utils.
 
+## Getting started
+
+If you want to add all widgets to your app, follow these steps:
+
+1. Add this to your `pubspec.yaml` file.
+
+    ```yaml
+    dependencies:
+      htdc:
+        git: git://github.com/HealthTechDevelopers/flutter_commons.git
+    ```
+2. You are ready! 😉
 
 ## Widgets
 
 ### `FadeButton`
+
+A widget that provides a fade effect when a tap gesture is performed on its child.
 
 1. Add this to your `pubspec.yaml` file.
 

@@ -71,8 +71,10 @@ packages:
     dependency: "direct main"
     description:
       path: "widgets/fade_button"
-      relative: true
-    source: path
+      ref: HEAD
+      resolved-ref: "3e220f515a18291b66419d58718d367d74347b22"
+      url: "git://github.com/HealthTechDevelopers/flutter_commons.git"
+    source: git
     version: "1.0.0"
   image:
     dependency: transitive
