@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   htdc_fade_button:
-    path: widgets/fade_button
+    path: ./widgets/fade_button
 
 dev_dependencies:
   flutter_test:
