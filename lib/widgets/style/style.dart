@@ -1,17 +1,9 @@
 part of htdc;
 
 /// Provides app style
-class Style<AssetsClass> extends InheritedWidget {
+class Style extends InheritedWidget {
   /// Keeps app colors
   final AppColors colors;
-
-  /// Keeps assets names wich can be used like:
-  /// ```dart
-  ///  Image.asset(
-  ///     StyleProvider.of(context).asset.facebookLogo,
-  ///  );
-  /// ```
-  final AssetsClass asset;
 
   /// Keeps app gradients
   final _AppGradients gradient;
@@ -27,7 +19,6 @@ class Style<AssetsClass> extends InheritedWidget {
 
   Style({
     Widget child,
-    @required this.asset,
     @required this.colors,
   })  : gradient = _AppGradients(colors),
         border = _AppBorders(colors),
@@ -37,7 +28,7 @@ class Style<AssetsClass> extends InheritedWidget {
 
   /// Always returns false because this InheritedWidget is not mutable
   @override
-  bool updateShouldNotify(InheritedWidget oldWidget) => false;
+  bool updateShouldNotify(InheritedWidget oldWidget) => true;
 
   static Style of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<Style>();

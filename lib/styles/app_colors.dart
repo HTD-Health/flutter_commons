@@ -16,6 +16,7 @@ class AppColors {
     @required this.errorColor,
     @required this.errorColor2,
     @required this.inactive,
+    @required this.placeholder,
   });
 
   final Color accent;
@@ -29,11 +30,17 @@ class AppColors {
 
   final Color shadow;
   final Color shadow2;
+
   final Color confirm;
   final Color confirm2;
+
   final Color errorColor;
   final Color errorColor2;
+
   final Color inactive;
+
+  /// Color for placeholders like [PlaceholderStripe]
+  final Color placeholder;
 
   /// Create [MaterialColor] from color
   MaterialColor getMaterialColorFrom(Color color) =>
@@ -60,19 +67,22 @@ class AppColors {
     Color errorColor,
     Color errorColor2,
     Color inactive,
+    Color placeholder,
   ) =>
       AppColors(
-          accent: accent ?? this.accent,
-          accent2: accent2 ?? this.accent2,
-          content: content ?? this.content,
-          content2: content2 ?? this.content2,
-          background: background ?? this.background,
-          background2: background2 ?? this.background2,
-          shadow: shadow ?? this.shadow,
-          shadow2: shadow2 ?? this.shadow2,
-          confirm: confirm ?? this.confirm,
-          confirm2: confirm2 ?? this.confirm2,
-          errorColor: errorColor ?? this.errorColor,
-          errorColor2: errorColor2 ?? this.errorColor2,
-          inactive: inactive ?? this.inactive);
+        accent: accent ?? this.accent,
+        accent2: accent2 ?? this.accent2,
+        content: content ?? this.content,
+        content2: content2 ?? this.content2,
+        background: background ?? this.background,
+        background2: background2 ?? this.background2,
+        shadow: shadow ?? this.shadow,
+        shadow2: shadow2 ?? this.shadow2,
+        confirm: confirm ?? this.confirm,
+        confirm2: confirm2 ?? this.confirm2,
+        errorColor: errorColor ?? this.errorColor,
+        errorColor2: errorColor2 ?? this.errorColor2,
+        inactive: inactive ?? this.inactive,
+        placeholder: placeholder ?? this.placeholder,
+      );
 }

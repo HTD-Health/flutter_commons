@@ -50,7 +50,7 @@ class PlaceholderStripe extends StatelessWidget {
 
   /// Defines [PlaceholderStripe] color
   ///
-  /// Optional. By default `content` color is used.
+  /// Optional. By default `placeholder` color is used.
   final Color color;
 
   const PlaceholderStripe({
@@ -63,16 +63,14 @@ class PlaceholderStripe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: margin,
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          color: color ?? Style.of(context).colors.content,
-          borderRadius:
-              borderRadius ?? const BorderRadius.all(Radius.circular(10)),
-        ),
+    return Container(
+      margin: margin,
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+        color: color ?? Style.of(context).colors.placeholder,
+        borderRadius:
+            borderRadius ?? const BorderRadius.all(Radius.circular(10)),
       ),
     );
   }

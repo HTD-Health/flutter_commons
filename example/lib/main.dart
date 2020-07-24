@@ -1,4 +1,7 @@
-import 'package:example/widgets/home_screen.dart';
+import 'package:example/routes.dart';
+import 'package:example/home_screen.dart';
+import 'package:example/widgets/fade_button.dart';
+import 'package:example/widgets/fader_example.dart';
 import 'package:flutter/material.dart';
 import 'package:htdc/htdc.dart';
 
@@ -31,6 +34,7 @@ const appColors = const AppColors(
   errorColor: Color(0xFFF85B65),
   errorColor2: Color(0xFFFEEBEC),
   inactive: Color.fromRGBO(23, 43, 77, 0.4),
+  placeholder: Color(0xFFe4e6e8),
 );
 
 class App extends StatelessWidget {
@@ -38,23 +42,29 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Style(
-      asset: appAssets,
       colors: appColors,
-      child: MaterialApp(
-        title: 'HTDC',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        onGenerateRoute: (RouteSettings settings) => MaterialPageRoute(
-          builder: (context) {
-            switch (settings.name) {
-              case '/':
+      child: Builder(builder: (context) {
+        return MaterialApp(
+          title: 'HTDC',
+          theme: ThemeData(
+            primarySwatch: appColors.primarySwatch,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          onGenerateRoute: (RouteSettings settings) => MaterialPageRoute(
+            builder: (_) {
+              if (settings.name == Routes.fader.val) {
+                return FaderExampleScreen();
+              } else if (settings.name == Routes.home.val) {
                 return HomeScreen();
-            }
-          },
-        ),
-      ),
+              } else if (settings.name == Routes.fadeButton.val) {
+                return FadeButtonExampleScreen();
+              } else {
+                throw UnimplementedError();
+              }
+            },
+          ),
+        );
+      }),
     );
   }
 }
