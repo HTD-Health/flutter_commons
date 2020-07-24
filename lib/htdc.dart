@@ -1,5 +1,7 @@
 library htdc;
 
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
@@ -21,3 +23,6 @@ part 'widgets/fade_button/fade_button.dart';
 
 /// Fader
 part 'widgets/fader/fader.dart';
+
+/// LoadingDots
+part 'widgets/loaders/loading_dots/loading_dots.dart';

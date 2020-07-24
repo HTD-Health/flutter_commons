@@ -9,6 +9,8 @@ A mono repo of helpful flutter widgets and utils.
       - [Example](#example)
     - [`Fader`](#fader)
       - [Example](#example-1)
+    - [`LoadingDots`](#loadingdots)
+      - [Example](#example-2)
 
 ## Getting started
 
@@ -50,7 +52,7 @@ FadeButton(
       ),
     ),
   ),
-),
+)
 ```
 ![FadeButton example](lib/widgets/fade_button/example.gif)
 
@@ -60,7 +62,7 @@ A widget that provides a loop fade effect that can be used to make fake content 
 
 #### Example
 ```dart
-    Column(
+Column(
   children: <Widget>[
     const PlaceholderStripe(
       height: 60,
@@ -74,7 +76,17 @@ A widget that provides a loop fade effect that can be used to make fake content 
       height: 60,
     ),
   ],
-),
+)
 ```
 ![Fader example](lib/widgets/fader/example.gif)
+
+### `LoadingDots`
+
+A widget that provides a loop fade effect that can be used to make fake content loaders. You can use it together with `PlaceholderStripe` widget.
+
+#### Example
+```dart
+Center(child: LoadingDots())
+```
+![LoadingDots example](lib/widgets/loaders/loading_dots/example.gif)
 
