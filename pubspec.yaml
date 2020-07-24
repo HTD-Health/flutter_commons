@@ -8,14 +8,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  htdc_fade_button:
-    git:
-      url: git://github.com/HealthTechDevelopers/flutter_commons.git
-      path: widgets/fade_button
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
