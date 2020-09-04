@@ -67,15 +67,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  htdc_fade_button:
-    dependency: "direct main"
-    description:
-      path: "widgets/fade_button"
-      ref: HEAD
-      resolved-ref: "3e220f515a18291b66419d58718d367d74347b22"
-      url: "git://github.com/HealthTechDevelopers/flutter_commons.git"
-    source: git
-    version: "1.0.0"
   image:
     dependency: transitive
     description:
@@ -187,4 +178,4 @@ packages:
     source: hosted
     version: "3.6.1"
 sdks:
-  dart: ">=2.6.0 <3.0.0"
+  dart: ">=2.7.0 <3.0.0"

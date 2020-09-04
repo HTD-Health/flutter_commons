@@ -1,6 +1,4 @@
-library htdc_fade_button;
-
-import 'package:flutter/widgets.dart';
+part of htdc;
 
 class FadeButton extends StatefulWidget {
   final VoidCallback onPressed;
